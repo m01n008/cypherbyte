@@ -1,0 +1,11 @@
+abi_version=1.201.0
+builtins_platform=WASM
+compiler_version=2.1.10
+depends=kotlin
+ir_signature_versions=1,2
+jsOutputName=cypherbyte-shared-wasm-js
+metadata_version=1.4.1
+serializedIrFileFingerprints=qpzeavvfzn2f.2xq1aat9uj0e3 3lhay83for6ef.2d1lk4qot3s49 25etwzo8omnk6.26fx5ste3fxvv 3k8hc4f6mbbqy.38cjl6119hp79
+serializedKlibFingerprint=3g1a0j40ixk37.s01yyt0ub83k
+unique_name=cypherbyte\:shared
+wasm_targets=wasm-js
