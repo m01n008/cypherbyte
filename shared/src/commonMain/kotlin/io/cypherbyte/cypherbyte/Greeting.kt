@@ -1,0 +1,9 @@
+package io.cypherbyte.cypherbyte
+
+class Greeting {
+    private val platform = getPlatform()
+
+    fun greet(): String {
+        return "Hello, ${platform.name}!"
+    }
+}
