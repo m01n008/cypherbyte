@@ -1,5 +1,6 @@
 package io.cypherbyte.cypherbyte
 
+import App
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.window.ComposeViewport
 import kotlinx.browser.document

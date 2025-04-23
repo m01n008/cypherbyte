@@ -25,5 +25,44 @@ val dummyPosts = listOf(
             - Hook `getDeviceId()`
             - Bypass SSL pinning
         """.trimIndent()
+    ),
+    BlogPost(
+        id = "frida-hooking-basics",
+        title = "Frida Hooking: Android API Hijack Guide",
+        date = "April 22, 2025",
+        content = """
+            ## Intro to Frida
+
+            Learn how to intercept and manipulate live function calls inside Android apps with Frida.
+
+            - Hook `getDeviceId()`
+            - Bypass SSL pinning
+        """.trimIndent()
+    ),
+    BlogPost(
+        id = "frida-hooking-basics",
+        title = "Frida Hooking: Android API Hijack Guide",
+        date = "April 22, 2025",
+        content = """
+            ## Intro to Frida
+
+            Learn how to intercept and manipulate live function calls inside Android apps with Frida.
+
+            - Hook `getDeviceId()`
+            - Bypass SSL pinning
+        """.trimIndent()
+    ),
+    BlogPost(
+        id = "frida-hooking-basics",
+        title = "Frida Hooking: Android API Hijack Guide",
+        date = "April 22, 2025",
+        content = """
+            ## Intro to Frida
+
+            Learn how to intercept and manipulate live function calls inside Android apps with Frida.
+
+            - Hook `getDeviceId()`
+            - Bypass SSL pinning
+        """.trimIndent()
     )
 )

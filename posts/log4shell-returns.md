@@ -1,4 +1,5 @@
 ---
+id: log4shell-returns
 title: Log4Shell Returns in 2025
 date: 2025-04-15
 ---

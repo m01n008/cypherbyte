@@ -1,4 +1,5 @@
 ---
+id: ios-kernel-bug
 title: iOS Kernel Vulnerability Disclosed
 date: 2025-04-08
 ---

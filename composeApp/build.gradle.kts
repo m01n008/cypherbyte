@@ -9,6 +9,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -66,6 +67,15 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
             implementation(projects.shared)
+            implementation(libs.kotlinx.serialization.json)
+
+
+        }
+
+        wasmJsMain.dependencies {
+            implementation(libs.kotlinx.serialization.json)
+            // implementation("org.jetbrains.kotlinx:kotlinx-html-js:0.7.5")
+
         }
     }
 

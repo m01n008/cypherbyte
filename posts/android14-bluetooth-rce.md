@@ -1,4 +1,5 @@
 ---
+id: android14-bluetooth-rce
 title: Zero-Day in Android 14 Bluetooth Stack
 date: 2025-04-10
 ---
