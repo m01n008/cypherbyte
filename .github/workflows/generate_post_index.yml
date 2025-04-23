@@ -1,0 +1,56 @@
+name: Generate Blog Post Index
+
+on:
+  push:
+    paths:
+      - 'posts/*.md'
+      - '.github/workflows/generate_post_index.yml'
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install gray-matter (for Markdown frontmatter parsing)
+        run: npm install gray-matter
+
+      - name: Generate index.json from posts/*.md
+        run: |
+          node <<EOF
+          const fs = require('fs');
+          const matter = require('gray-matter');
+          const path = require('path');
+
+          const postsDir = './posts';
+          const files = fs.readdirSync(postsDir).filter(f => f.endsWith('.md'));
+          const index = files.map(filename => {
+            const filePath = path.join(postsDir, filename);
+            const raw = fs.readFileSync(filePath, 'utf-8');
+            const { data } = matter(raw);
+
+            return {
+              id: filename.replace('.md', ''),
+              title: data.title || filename,
+              date: data.date || new Date().toISOString().split('T')[0],
+              filename: filename
+            };
+          });
+
+          fs.writeFileSync('./posts/index.json', JSON.stringify(index, null, 2));
+          EOF
+
+      - name: Commit and push index.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add posts/index.json
+          git commit -m "🤖 Auto-generate posts/index.json"
+          git push
